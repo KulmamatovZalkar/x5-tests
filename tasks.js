@@ -1,13 +1,13 @@
 // 1) Реализуйте функцию уникализации значений в массиве
 
-const unique = (array) => {
-    let arr = array.filter((a, b)=> {
-        return array.indexOf(a) == b
-    })
-    console.log(arr)
-};
+// const unique = (array) => {
+//   let arr = array.filter((a, b) => {
+//     return array.indexOf(a) == b;
+//   });
+//   console.log(arr);
+// };
 
-unique([1, 1, 3, 2, 2, 5, 7, 7, 7, 5, 1, 3, 4, 2, 4, 10]); // => [1, 2, 3, 4, 5, 7]
+// unique([1, 1, 3, 2, 2, 5, 7, 7, 7, 5, 1, 3, 4, 2, 4, 10]); // => [1, 2, 3, 4, 5, 7]
 
 // ======================================================================
 
@@ -23,29 +23,33 @@ unique([1, 1, 3, 2, 2, 5, 7, 7, 7, 5, 1, 3, 4, 2, 4, 10]); // => [1, 2, 3, 4, 5,
 
 // 3) Просуммируйте значения дерева
 
-//   const sumTreeBranches = (tree) => {
-//     // ...
+// const sumTreeBranches = (tree) => {
+//   let summ = 0;
+
+//   for (key in tree) {
+//     if (typeof tree[key] === "object") summ += sumTreeBranches(tree[key]);
+//     else summ += tree.value;
 //   }
 
-//   sumTreeBranches({
-//    value: 3,
-//    children: [
-//      {
-//        value: 2,
-//        children: [
-//          {
-//            value: 5,
-//            children: [
-//              { value: 1 },
-//              { value: 2 }
-//            ]
-//          },
-//          { value: 4 },
-//          { value: 1 }
-//        ]
-//      }
-//    ]
-//   }) // => 18
+//   return summ;
+// };
+
+// console.log(sumTreeBranches({
+//   value: 3,
+//   children: [
+//     {
+//       value: 2,
+//       children: [
+//         {
+//           value: 5,
+//           children: [{ value: 1 }, { value: 2 }],
+//         },
+//         { value: 4 },
+//         { value: 1 },
+//       ],
+//     },
+//   ],
+// })); // => 18
 
 // ======================================================================
 
@@ -63,6 +67,5 @@ unique([1, 1, 3, 2, 2, 5, 7, 7, 7, 5, 1, 3, 4, 2, 4, 10]); // => [1, 2, 3, 4, 5,
 //   _.get('/download', (res, req) => {
 //     // ...
 //   })
-
 
 // ======================================================================
